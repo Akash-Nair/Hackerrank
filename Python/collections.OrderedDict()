@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+d = OrderedDict()
+n = int(input())
+for i in range(n):
+    s = input().split()
+    price = int(s.pop())
+    item = ' '.join(s)
+    if item in d:
+        d[item] += price
+    else:
+        d[item] = price
+
+for i in d:
+    print(i,d[i])
